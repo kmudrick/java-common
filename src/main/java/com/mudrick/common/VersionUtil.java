@@ -78,29 +78,4 @@ public class VersionUtil {
     return x.size() < y.size() ? -1 : 1;
   }
 
-  public static void main(String[] args) {
-    printCompare(null, "3.0");
-    printCompare("", "3.0");
-    printCompare(" ", "3.0");
-    printCompare("1", "1");
-    printCompare("2", "1");
-    printCompare("1", "2");
-    printCompare("1.0", "1");
-    printCompare("1.0.0", "1");
-    printCompare("1.0.1", "1");
-    printCompare("3.1", "3.1.0");
-    printCompare("3.1.0", "3.10");
-    printCompare("3.1", "3.10");
-    printCompare("3.1", "3.1.1");
-    printCompare("3.1", "3.0.0.2");
-    printCompare("3.1", "3.1.0.0.0.0.0.0");
-    printCompare("3.1", "3.1.a");
-    printCompare("3.1", "3.1a");
-  }
-  
-  private static void printCompare(String version1, String version2) {
-    System.out.println("Comparing " + version1 + " vs " + version2 + " => " 
-                       + compare(version1, version2));
-  }
-
 }
